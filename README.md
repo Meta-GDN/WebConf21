@@ -1,5 +1,5 @@
 # Meta-GDN
-Implementation for the submission, Few-shot Network Anomaly Detection via Cross-networkMeta-learning, for the Web Conference 2021.
+Implementation for the submission, Few-shot Network Anomaly Detection via Cross-network Meta-learning, for the Web Conference 2021.
 # Requirements
 -Python: 3.6  
 -Pytorch: 1.1.0  

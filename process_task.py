@@ -127,12 +127,6 @@ def process_Yelp(nb_task,f_l=None,degree=2,tr1=0.7,tr2=0.4,lr=0.08):
 
 if __name__ == "__main__":
     main()
-    # process_blog(nb_task=4)
-    # process_Yelp(nb_task=1)
-    ins = task(nb_task=2,degree=2,tr=0.5,lr=0.05)
-    ins.loadNProcess()
-    a,b,c,d,e = ins.sampleAnomaly()
-    # _, _, _ = process_blog()
-    # a = np.arange(4,10)
-    # b = np.array([6, 9])
-    # print(remove_values(a, b))
+    # ins = task(nb_task=2,degree=2,tr=0.5,lr=0.05)
+    # ins.loadNProcess()
+    # a,b,c,d,e = ins.sampleAnomaly()

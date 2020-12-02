@@ -209,52 +209,6 @@ def SGC_process(data_name, degree, l_ratio, tr_ratio):
 
 #     return features, labels, idx_train, y_train, idx_test, y_test, idx_labeled_anomaly, train_unlabeled
 
-
-
-# def process_blog(nb_task, data_name="BlogCatalog",degree=2,tr=0.8,lr=0.08):
-
-    # adj, feature, label = load_data(data_name)
-    # idx_anomaly = np.nonzero(label == 1)[0]
-    # idx_normal = np.nonzero(label == 0)[0]
-    # np.random.shuffle(idx_normal)
-    # np.random.shuffle(idx_anomaly)
-    # # split train/test set
-    # [ano_train, ano_test] = np.array_split(idx_anomaly, [int(tr*len(idx_anomaly))])
-    # [nor_train, nor_test] = np.array_split(idx_normal, [int(tr*len(idx_normal))])
-    # idx_test = np.concatenate((ano_test, nor_test)).tolist()
-
-    # ano_train_split = np.array_split(ano_train, nb_task)
-    # nor_train_split = np.array_split(nor_train, nb_task)
-    # labeled_list = []
-    # unlabeled_list = []
-    # for i in range(len(ano_train_split)):
-    #     l_a = ano_train_split[i]
-    #     # print(len(l_a))
-    #     nb = int(len(l_a)*lr)
-    #     # print(nb)
-    #     # print(len(nor_train_split[i]))
-    #     idx_labeled = np.random.choice(l_a, size=nb, replace=False)
-    #     labeled_list.append(idx_labeled.tolist())
-    #     # print(len(idx_labeled))
-    #     idx_unlabeled = remove_values(l_a, idx_labeled)
-    #     # print(idx_unlabeled)
-    #     # print(len(idx_unlabeled))
-    #     l_u = np.concatenate((nor_train_split[i], idx_unlabeled)).tolist()
-    #     unlabeled_list.append(l_u)
-
-    # adj = normalize_adjacency(adj)
-    # feature = normalize_feature(feature)
-    # adj = sp_matrix_to_torch_sparse_tensor(adj).float()
-    # # feature = sp_matrix_to_torch_sparse_tensor(feature).float()
-    # feature = torch.FloatTensor(feature.toarray())
-
-    # for i in range(degree):
-    #     feature = torch.sparse.mm(adj, feature)
-
-    # label = torch.FloatTensor(label)
-    # return feature, label, labeled_list, unlabeled_list, idx_test
-
-
 def parse_index_file(filename):
     """Parse index file."""
     index = []
